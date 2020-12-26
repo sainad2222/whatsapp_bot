@@ -24,12 +24,6 @@ def sms_reply():
         except Exception as e:
             print(e)
             resp.message(f"Invalid syntax")
-    elif command == 'e':
-        try:
-            resp.message(eval(msg))
-        except Exception as e:
-            print(e)
-            resp.message(f"Invalid syntax")
     else:
         resp.message(f"hello {msg}")
 

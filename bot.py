@@ -15,7 +15,10 @@ def sms_reply():
 
     # Create reply
     resp = MessagingResponse()
-    resp.message(f"hello {msg}")
+    if msg.split()[0]=='c':
+        resp.message(f"wa.me/91{msg.split()[1]}")
+    else:
+        resp.message(f"hello {msg}")
 
     return str(resp)
 
